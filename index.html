@@ -17,15 +17,16 @@
 
 <body>
   <header>
+    <input type="checkbox" name="menu-toggler-input" id="menu-toggler-input" class="hide">
     <nav class="main-nav">
       <div class="main-nav__toggler">
-        <label for="menu-toggler">
+        <label for="menu-toggler-input">
           <i class="fa-solid fa-bars"></i>
         </label>
       </div>
       <div class="main-nav__controls">
         <div class="controls__user">
-          <a href="./login-signup.html" class="controls__link">
+          <a href="./user-dash.html" class="controls__link">
             <i class="fa-solid fa-user-circle controls__icon"></i>
             <span class="controls__text">
               dashboard
@@ -58,7 +59,7 @@
         </div>
       </div>
       <div class="main-nav__logo">
-        <img src="./assets/images/logo.svg" alt="Rocket Car" class="main-nav__logo-image">
+        <img src="./assets/images/logo2.svg" alt="Rocket Car" class="main-nav__logo-image">
       </div>
       <div class="main-nav__searchbar">
         <div class="searchbar">
@@ -75,7 +76,43 @@
       </div>
     </nav>
     <nav class="menu">
-
+      <ul class="menu__list">
+        <li class="menu__list-item has-close">
+          <label for="menu-toggler-input" class="close-menu-btn">
+            <i class="fa-solid fa-x"></i>
+          </label>
+        </li>
+        <li class="menu__list-item">
+          <a href="" class="menu__link">
+            <i class="fa-solid fa-home"></i>
+            Home
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="" class="menu__link">
+            <i class="fa-solid fa-car"></i>
+            Products
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="" class="menu__link">
+            <i class="fa-solid fa-user-circle"></i>
+            User Dashboard
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="" class="menu__link">
+            <i class="fa-solid fa-message"></i>
+            Contact Us
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="" class="menu__link has-reg">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            Signin / Signup
+          </a>
+        </li>
+      </ul>
     </nav>
   </header>
 </body>

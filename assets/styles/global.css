@@ -165,8 +165,9 @@ html {
   --white: #ffffff;
   --navy: #331d66;
   --purple-0: #3c3fa3;
-  --purple-50: #4e68f0;
-  --purple-100: #8795fe;
+  --purple-50: rgb(54, 57, 153);
+  --purple-100: #4e68f0;
+  --light-blue: #8795fe;
   --yellow: #ffc107;
   --red: #fd0054;
   --radius-bg: 10px;
@@ -179,8 +180,16 @@ body {
   overflow-x: hidden;
 }
 
+.hide{
+  display: none;
+}
+
 /* global styles end */
 /* header styles start */
+
+header{
+  position: relative;
+}
 
 .main-nav {
   background-color: var(--purple-0);
@@ -311,6 +320,63 @@ body {
   outline: none;
 }
 
+.menu{
+  position: fixed;
+  isolation: isolate;
+  width: 20rem;
+  height: 100dvh;
+  top: 0;
+  right: -25rem;
+  z-index: 10000;
+  background-color: var(--purple-50);
+  padding: 2rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.menu__list{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu__list-item:not(.has-close){
+  border-bottom: 1px solid var(--light-blue);
+  padding: 0.5rem;
+}
+
+.menu__list-item:last-child{
+  border: none;
+}
+
+.menu__link{
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+
+.menu__link:hover{
+  color: var(--yellow);
+}
+
+.has-reg{
+  background-color: var(--navy);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--yellow);
+}
+
+.close-menu-btn{
+  color: var(--white);
+  cursor: pointer;
+}
+
+.close-menu-btn:hover{
+  color: var(--yellow);
+}
+
+#menu-toggler-input:checked~.menu{
+  right: 0;
+}
+
 /* header styles end */
 /* footer styles start */
 
@@ -348,10 +414,54 @@ body {
   .main-nav__toggler{
     display: none;
   }
+
+  .menu{
+    position: static;
+    width: 80% !important;
+    margin-inline: auto;
+    height: auto;
+    padding: 0.5rem;
+    border-radius: 0 0 var(--radius-bg) var(--radius-bg);
+    box-shadow: 
+      10px 5px 15px var(--black-20),
+      -10px 5px 15px var(--black-20);
+  }
+
+  .has-close{
+    display: none;
+  }
+
+  .menu__list{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .menu__list-item:not(.has-close){
+    border-bottom: none;
+    padding: 0.5rem 0;
+  }
+
+  .menu__link > i{
+    display: none;
+  }
+
+  .has-reg{
+    padding: 0.2rem 0.5rem;
+  }
 }
 
-@media screen and (min-width: 940px) {}
+@media screen and (min-width: 940px) {
 
-@media screen and (min-width: 1200px) {}
+  .menu__list{
+    gap: 1.5rem;
+    padding-inline: 1rem;
+  }
+
+  .menu__link > i{
+    display: inline;
+  }
+}
 
 /* responsive styles end */
