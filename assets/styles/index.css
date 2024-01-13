@@ -28,19 +28,19 @@
   grid-area: con;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .banner__content-header{
   font-size: 3rem;
-  font-weight: bolder;
+  font-weight: 800;
   color: var(--navy);
 }
 
 .banner__content-text{
   max-width: 30rem;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--txt);
 }
 
@@ -60,15 +60,134 @@
   transform: scale(1.1);
 }
 
+.popular__header{
+  margin-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popular{
+  margin-bottom: 3rem;
+}
+
+.popular__header-text{
+  color: var(--navy);
+  font-size: clamp(1.2rem, 1.2rem + 1vw, 3rem);
+  font-weight: 700;
+}
+
+.popular__header-text > i{
+  color: var(--red);
+}
+
+.popular__header-link{
+  display: none;
+}
+
+.popular__header-btn{
+  display: block;
+  background-color: var(--purple-0);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  outline: transparent;
+  color: var(--white);
+  box-shadow: 0 0 15px var(--black-20);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-block: auto;
+}
+
+.popular__header-btn:hover{
+  transform: scale(1.1);
+  color: var(--yellow);
+}
+
+.popular__category{
+  display: grid;
+  gap: 1.5rem;
+}
+
+.popular__category-inner{
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  font-weight: 900;
+  font-size: 1.8rem;
+  background-repeat: no-repeat;
+  background-position: 0 90%;
+  background-size: cover;
+  position: relative;
+  box-shadow: 5px 5px 10px var(--black-20);
+  transition: transform 0.3s ease;
+}
+
+.popular__category-inner:hover{
+  transform: translateY(-0.5rem);
+}
+
+.suv{
+  background-image: 
+  linear-gradient(0deg,var(--black-60),var(--black-60)),
+  url(../images/img/suv/suv-4.jpg);
+}
+
+.bigsize{
+  background-image: 
+  linear-gradient(0deg,var(--black-60),var(--black-60)),
+  url(../images/img/big-size/bigsize-4.jpg);
+}
+
+.sedan{
+  background-image: 
+  linear-gradient(0deg,var(--black-60),var(--black-60)),
+  url(../images/img/sedan-sport/sedan-sport-1.jpg);
+}
+
+.offroad{
+  background-image: 
+  linear-gradient(0deg,var(--black-60),var(--black-60)),
+  url(../images/img/off-road/offroad-3.jpg);
+}
+
+.popular__category-link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.popular__category-img{
+  width: 25%;
+  height: 25%;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.popular__category-img > img{
+  display: block;
+  width: 100%;
+}
 
 @media screen and (min-width: 540px) {
-  
+  .popular__header{
+    justify-content: space-between;
+  }
+
+  .popular__header-link{
+    display: block;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .banner__container{
     grid-template-areas: "image con";
     padding-inline: clamp(1rem, 1.5rem + 2vw, 4rem);
+  }
+
+  .popular__category{
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -84,5 +203,5 @@
 }
 
 @media screen and (min-width: 1200px) {
-  
+
 }
