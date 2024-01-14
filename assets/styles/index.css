@@ -61,7 +61,8 @@
 }
 
 .popular__header,
-.latest__header{
+.latest__header,
+.testimonial__header{
   margin-bottom: 2rem;
   text-align: center;
   display: flex;
@@ -70,7 +71,8 @@
 }
 
 .popular,
-.latest{
+.latest,
+.testimonial{
   margin-bottom: 3rem;
   box-shadow: 0 0 15px var(--black-40);
   border-radius: var(--radius-bg);
@@ -78,7 +80,8 @@
 }
 
 .popular__header-text,
-.latest__header-text{
+.latest__header-text,
+.testimonial__header-text{
   color: var(--navy);
   font-size: clamp(1rem, 1rem + 1vw, 3rem);
   font-weight: 700;
@@ -86,17 +89,20 @@
 }
 
 .popular__header-text > i,
-.latest__header-text > i{
+.latest__header-text > i,
+.testimonial__header-text > i{
   color: var(--red);
 }
 
 .popular__header-link,
-.latest__header-link{
+.latest__header-link,
+.testimonial__header-link{
   display: none;
 }
 
 .popular__header-btn,
-.latest__header-btn{
+.latest__header-btn,
+.testimonial__header-btn{
   display: block;
   background-color: var(--purple-0);
   padding: 0.5rem 1rem;
@@ -111,7 +117,8 @@
 }
 
 .popular__header-btn:hover,
-.latest__header-btn:hover{
+.latest__header-btn:hover,
+.testimonial__header-btn:hover{
   transform: scale(1.1);
   color: var(--yellow);
 }
@@ -187,19 +194,163 @@
   place-items: center;
 }
 
+.testimonial__body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.testimonial__container{
+  width: 100%;
+  overflow: hidden;
+}
+
+.testimonial__inner{
+  width: 100%;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  /*  */
+}
+
+.testimonial__item{
+  min-width: 100%;
+  padding: 1rem;
+}
+
+.testimonial__item-inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 40rem;
+  margin-inline: auto;
+  box-shadow: 0 0 15px var(--black-20);
+  padding: 1rem;
+  border-radius: var(--radius-bg);
+}
+
+.testimonial__item-img{
+  min-width: 6.5rem;
+  border: 3px dashed var(--red);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 10px 10px 15px var(--black-20);
+}
+
+.testimonial__item-img > img{
+  display: block;
+  width: 100%;
+}
+
+.testimonial__item-content{
+  max-width: 20rem;
+}
+
+.testimonial__item-content>*{
+  margin-block: 0.5rem;
+}
+
+.testimonial__item-name{
+  font-size: 1.2rem;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.testimonial__item-name span{
+  font-size: 0.8rem;
+  color: var(--txt);
+}
+
+.testimonial__item-stars{
+  color: var(--yellow);
+}
+
+.testimonial__item-text{
+  text-align: center;
+}
+
+.testimonial__item-text > i{
+  color: var(--purple-0);
+}
+
+.testimonial__controls{
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.testimonial__controls label{
+  display: block;
+  width: 20%;
+  height: 8px;
+  border-radius: 100vw;
+  margin-inline: 0.2rem;
+  background-color: var(--light-blue);
+  cursor: pointer;
+}
+
+#slide1:checked~.testimonial__container>.testimonial__inner{
+  transform: translateX(0);
+}
+
+#slide1:checked~.testimonial__controls>:nth-child(1){
+  background-color: var(--navy);
+}
+
+#slide2:checked~.testimonial__container>.testimonial__inner{
+  transform: translateX(-100%);
+}
+
+#slide2:checked~.testimonial__controls>:nth-child(2){
+  background-color: var(--navy);
+}
+
+#slide3:checked~.testimonial__container>.testimonial__inner{
+  transform: translateX(-200%);
+}
+
+#slide3:checked~.testimonial__controls>:nth-child(3){
+  background-color: var(--navy);
+}
+
+#slide4:checked~.testimonial__container>.testimonial__inner{
+  transform: translateX(-300%);
+}
+
+#slide4:checked~.testimonial__controls>:nth-child(4){
+  background-color: var(--navy);
+}
+
+#slide5:checked~.testimonial__container>.testimonial__inner{
+  transform: translateX(-400%);
+}
+
+#slide5:checked~.testimonial__controls>:nth-child(5){
+  background-color: var(--navy);
+}
+
 @media screen and (min-width: 540px) {
   .popular__header,
-  .latest__header{
+  .latest__header,
+  .testimonial__header{
     justify-content: space-between;
   }
 
   .popular__header-link,
-  .latest__header-link{
+  .latest__header-link,
+  .testimonial__header-link{
     display: block;
   }
 
   .cart__container{
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial__item-inner{
+    flex-direction: row;
   }
 }
 
