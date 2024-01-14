@@ -72,7 +72,8 @@
 
 .popular,
 .latest,
-.testimonial{
+.testimonial,
+.feather{
   margin-bottom: 3rem;
   box-shadow: 0 0 15px var(--black-40);
   border-radius: var(--radius-bg);
@@ -210,7 +211,6 @@
   width: 100%;
   display: flex;
   transition: transform 0.3s ease-in-out;
-  /*  */
 }
 
 .testimonial__item{
@@ -276,7 +276,8 @@
 }
 
 .testimonial__controls{
-  width: 20rem;
+  width: 100%;
+  max-width: 20rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
