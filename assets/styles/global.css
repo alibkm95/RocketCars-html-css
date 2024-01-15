@@ -136,7 +136,8 @@ a {
   text-decoration: none;
 }
 
-input[type="text"] {
+input[type="text"],
+textarea {
   font-family: inherit;
   color: inherit;
 }
