@@ -1,0 +1,131 @@
+#signup:checked~.accounting__form-signup{
+  display: flex;
+}
+
+#login:checked~.accounting__form-login{
+  display: flex;
+}
+
+.form__container{
+  padding: clamp(1rem, 1rem + 1vw, 2.5rem);
+  max-width: 50rem;
+  margin-inline: auto;
+  box-shadow: 0 0 15px var(--black-40);
+  border-radius: var(--radius-bg);
+}
+
+.accounting__form-signup,
+.accounting__form-login{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.form__signup-img,
+.form__login-img{
+  width: 100%;
+}
+
+.form__signup-img > img,
+.form__login-img > img{
+  display: block;
+  width: 100%;
+}
+
+.form__signup-inputs,
+.form__login-inputs{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.form__signup-inputs>div,
+.form__login-inputs>div{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.3rem;
+  padding: 0.3rem 0;
+  border-bottom: 2px solid var(--black-20);
+}
+
+.form__signup-inputs i,
+.form__login-inputs i{
+  color: var(--txt);
+  font-size: 1.4rem;
+}
+
+.form__signup-inputs input,
+.form__login-inputs input{
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: transparent;
+}
+
+.signup-google-btn,
+.signup-btn,
+.login-btn{
+  font: inherit;
+  color: var(--white);
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  outline: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.signup-google-btn:hover,
+.signup-btn:hover,
+.login-btn:hover{
+  transform: scale(1.05);
+}
+
+.signup-google-btn{
+  background-color: var(--red);
+}
+
+.signup-google-btn > i{
+  color: var(--white);
+  font-size: 1rem;
+  margin-left: auto;
+}
+
+.signup-btn,
+.login-btn{
+  background-color: var(--light-blue);
+}
+
+.signup-text,
+.login-text{
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.signup-text>label,
+.login-text>label{
+  font-weight: 700;
+  color: var(--light-blue);
+  cursor: pointer;
+}
+
+.signup-text>label:hover,
+.login-text>label:hover{
+  color: var(--purple-0);
+}
+
+@media screen and (min-width: 768px) {
+  .accounting__form-signup,
+  .accounting__form-login{
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- icon source -->
+  <link rel="stylesheet" href="./assets/styles/all.min.css">
+  <!-- global styles -->
+  <link rel="stylesheet" href="./assets/styles/global.css">
+  <!-- styles -->
+  <link rel="stylesheet" href="./assets/styles/login-signup.css">
+  <!-- favicon source -->
+  <link rel="sortcut icon" href="./assets/images/icon.ico">
+  <title>Rocket Car</title>
+</head>
+<body>
+  <header>
+    <input type="checkbox" name="menu-toggler-input" id="menu-toggler-input" class="hide">
+    <nav class="main-nav">
+      <div class="main-nav__toggler">
+        <label for="menu-toggler-input">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+      </div>
+      <div class="main-nav__controls">
+        <div class="controls__user">
+          <a href="./user-dash.html" class="controls__link">
+            <i class="fa-solid fa-user-circle controls__icon"></i>
+            <span class="controls__text">
+              dashboard
+            </span>
+          </a>
+        </div>
+        <div class="controls__basket">
+          <a href="./user-dash.html" class="controls__link">
+            <i class="fa-solid fa-shopping-cart controls__icon"></i>
+            <span class="controls__text">
+              basket
+            </span>
+          </a>
+        </div>
+        <div class="controls__support">
+          <a href="#support-area" class="controls__link">
+            <i class="fa-solid fa-headphones controls__icon"></i>
+            <span class="controls__text">
+              support
+            </span>
+          </a>
+        </div>
+        <div class="controls__theme">
+          <a href="#/" class="controls__link">
+            <i class="fa-solid fa-moon controls__icon"></i>
+            <span class="controls__text">
+              theme
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="main-nav__logo">
+        <img src="./assets/images/logo2.svg" alt="Rocket Car" class="main-nav__logo-image">
+      </div>
+      <div class="main-nav__searchbar">
+        <div class="searchbar">
+          <label class="searchbar__label" for="searchbox">
+            <i class="fa-solid fa-search"></i>
+          </label>
+          <input type="text" name="searchbox" id="searchbox" class="searchbar__input" placeholder="Search ...">
+        </div>
+      </div>
+    </nav>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__list-item has-close">
+          <label for="menu-toggler-input" class="close-menu-btn">
+            <i class="fa-solid fa-x"></i>
+          </label>
+        </li>
+        <li class="menu__list-item">
+          <a href="./index.html" class="menu__link">
+            <i class="fa-solid fa-home"></i>
+            Home
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="./products.html" class="menu__link">
+            <i class="fa-solid fa-car"></i>
+            Products
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="./user-dash.html" class="menu__link">
+            <i class="fa-solid fa-user-circle"></i>
+            User Dashboard
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="#/" class="menu__link">
+            <i class="fa-solid fa-message"></i>
+            Contact Us
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="./login-signup.html" class="menu__link has-reg">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            Signin / Signup
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="accounting">
+      <div class="form__container">
+        <input type="radio" name="accounting-toggler" class="hide" id="signup" checked>
+        <input type="radio" name="accounting-toggler" class="hide" id="login">
+        <form action="#" class="accounting__form-signup">
+          <div class="form__signup-img">
+            <img src="./assets/images/register.svg" alt="register">
+          </div>
+          <div class="form__signup-inputs">
+            <div class="input__name">
+              <i class="fa-solid fa-header"></i>
+              <input
+              type="text"
+              name="fullName"
+              id="fullName"
+              placeholder="name ...">
+            </div>
+            <div class="input__userName">
+              <i class="fa-solid fa-user"></i>
+              <input
+              type="text"
+              name="userName"
+              id="userName-signup"
+              placeholder="user name ...">
+            </div>
+            <div class="input__email">
+              <i class="fa-solid fa-envelope"></i>
+              <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="email ...">
+            </div>
+            <div class="input__password">
+              <i class="fa-solid fa-fingerprint"></i>
+              <input
+              type="password"
+              name="password"
+              id="password-signup"
+              placeholder="password ...">
+            </div>
+            <div class="input__password-repeat">
+              <i class="fa-solid fa-fingerprint"></i>
+              <input
+              type="password"
+              name="password-repeat"
+              id="password-repeat"
+              placeholder="repeat password ...">
+            </div>
+            <button type="button" class="signup-google-btn">
+              signup using google
+              <i class="fa-brands fa-google"></i>
+            </button>
+            <button type="submit" class="signup-btn">
+              create account
+            </button>
+            <p class="signup-text">
+              already have an account?
+              <label for="login">
+                login.
+              </label>
+            </p>
+          </div>
+        </form>
+        <form action="#" class="accounting__form-login">
+          <div class="form__login-img">
+            <img src="./assets/images/login.svg" alt="login">
+          </div>
+          <div class="form__login-inputs">
+            <div class="input__userName">
+              <i class="fa-solid fa-user"></i>
+              <input
+              type="text"
+              name="userName"
+              id="userName"
+              placeholder="user name or email ...">
+            </div>
+            <div class="input__password">
+              <i class="fa-solid fa-fingerprint"></i>
+              <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="password ...">
+            </div>
+            <button type="submit" class="login-btn">
+              login
+            </button>
+            <p class="login-text">
+              dont have an account?
+              <label for="signup">
+                signup.
+              </label>
+            </p>
+            <p class="login-text">
+              forgot your password?
+              <label for="#">click here!
+              </label>
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__about">
+      <span class="footer__header-text">
+        About Rocket Car
+        <img src="./assets/images/icon.png" alt="Rocket Car">
+        :
+      </span>
+      <p class="footer__text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe totam vel cum eum nam repudiandae autem ipsam sint praesentium sapiente, facilis blanditiis ratione est quibusdam odio, neque expedita fugiat sunt
+      </p>
+    </div>
+    <div class="footer__links">
+      <span class="footer__header-text">
+        Quick Access:
+      </span>
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            Rocket Car
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            Products
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            User Dashboard
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            Support
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            News Letter
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            Blog
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__contact">
+      <p class="footer__header-text">
+        <i class="fa-solid fa-location-dot"></i>
+        Address:
+      </p>
+      <p class="footer__contact-address">
+        2780 Alexander Avenue, Concord, California, 94520.
+      </p>
+      <p class="footer__header-text">
+        <i class="fa-solid fa-phone"></i>
+        Phone Number:
+      </p>
+      <p class="footer__contact-phone">
+        +1-584-555-666-22
+      </p>
+      <p class="footer__header-text">
+        <i class="fa-solid fa-comment"></i>
+        Social:
+      </p>
+      <div class="footer__contact-socials">
+        <a href="#/" class="footer__link">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#/" class="footer__link">
+          <i class="fa-brands fa-amazon"></i>
+        </a>
+        <a href="#/" class="footer__link">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+        <a href="#/" class="footer__link">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer__copyRight">
+      2024 &copy; Rocket Car. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
