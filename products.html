@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- icon source -->
+  <link rel="stylesheet" href="./assets/styles/all.min.css">
+  <!-- global styles -->
+  <link rel="stylesheet" href="./assets/styles/global.css">
+  <!-- styles -->
+  <link rel="stylesheet" href="./assets/styles/products.css">
+  <!-- favicon source -->
+  <link rel="sortcut icon" href="./assets/images/icon.ico">
+  <title>Rocket Car</title>
+</head>
+<body>
+  <header>
+    <input type="checkbox" name="menu-toggler-input" id="menu-toggler-input" class="hide">
+    <nav class="main-nav">
+      <div class="main-nav__toggler">
+        <label for="menu-toggler-input">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+      </div>
+      <div class="main-nav__controls">
+        <div class="controls__user">
+          <a href="./user-dash.html" class="controls__link">
+            <i class="fa-solid fa-user-circle controls__icon"></i>
+            <span class="controls__text">
+              dashboard
+            </span>
+          </a>
+        </div>
+        <div class="controls__basket">
+          <a href="./user-dash.html" class="controls__link">
+            <i class="fa-solid fa-shopping-cart controls__icon"></i>
+            <span class="controls__text">
+              basket
+            </span>
+          </a>
+        </div>
+        <div class="controls__support">
+          <a href="#support-area" class="controls__link">
+            <i class="fa-solid fa-headphones controls__icon"></i>
+            <span class="controls__text">
+              support
+            </span>
+          </a>
+        </div>
+        <div class="controls__theme">
+          <a href="#/" class="controls__link">
+            <i class="fa-solid fa-moon controls__icon"></i>
+            <span class="controls__text">
+              theme
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="main-nav__logo">
+        <img src="./assets/images/logo2.svg" alt="Rocket Car" class="main-nav__logo-image">
+      </div>
+      <div class="main-nav__searchbar">
+        <div class="searchbar">
+          <label class="searchbar__label" for="searchbox">
+            <i class="fa-solid fa-search"></i>
+          </label>
+          <input type="text" name="searchbox" id="searchbox" class="searchbar__input" placeholder="Search ...">
+        </div>
+      </div>
+    </nav>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__list-item has-close">
+          <label for="menu-toggler-input" class="close-menu-btn">
+            <i class="fa-solid fa-x"></i>
+          </label>
+        </li>
+        <li class="menu__list-item">
+          <a href="./index.html" class="menu__link">
+            <i class="fa-solid fa-home"></i>
+            Home
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="./products.html" class="menu__link">
+            <i class="fa-solid fa-car"></i>
+            Products
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="./user-dash.html" class="menu__link">
+            <i class="fa-solid fa-user-circle"></i>
+            User Dashboard
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="#/" class="menu__link">
+            <i class="fa-solid fa-message"></i>
+            Contact Us
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="./login-signup.html" class="menu__link has-reg">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            Signin / Signup
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="filter">
+      <div class="filter__left">
+        <label for="select-category">
+          <i class="fa-solid fa-list"></i>
+          Category:
+        </label>
+        <select name="select-category" id="select-category">
+          <option value="all" selected>All</option>
+          <option value="big-size">Big size</option>
+          <option value="buggi-gocart">Buggi and go-cart</option>
+          <option value="offroad">Offroad</option>
+          <option value="sedan-sport">Sedan and sport</option>
+          <option value="suv">SUV</option>
+        </select>
+      </div>
+      <div class="filter__middle">
+        <label for="select-sort">
+          <i class="fa-solid fa-arrow-up-wide-short"></i>
+          sort:
+        </label>
+        <select name="select-sort" id="select-sort">
+          <option value="az" selected>Aa-Zz</option>
+          <option value="za">Zz-Aa</option>
+          <option value="raiting">Raiting</option>
+          <option value="pricing">Pricing</option>
+        </select>
+      </div>
+      <div class="filter__right">
+        <label for="select-itemperpage">
+          <i class="fa-solid fa-hashtag"></i>
+          items:
+        </label>
+        <select name="select-itemperpage" id="select-itemperpage">
+          <option value="12" selected>12 item</option>
+          <option value="15">15 item</option>
+          <option value="20">20 item</option>
+          <option value="25">25 item</option>
+        </select>
+      </div>
+    </section>
+    <section class="cart">
+      <div class="cart__container">
+        <div class="cart__item">
+          <div class="cart__item-img">
+            <img src="./assets/images/img/big-size/bigsize-2.jpg" alt="">
+          </div>
+          <div class="cart__item-inner">
+            <h4 class="cart__item-title">
+              <a href="./product-detailes.html" class="cart__item-link">
+                Ford Police Car
+              </a>
+              <span class="cart__item-rating">
+                <i class="fa-solid fa-star"></i>
+                4
+              </span>
+            </h4>
+            <p class="cart__item-price">
+              <span>Price:</span>
+              220
+              <i class="fa-solid fa-dollar"></i>
+            </p>
+            <p class="cart__item-type">
+              <span>Type:</span>
+              electrical
+              <i class="fa-solid fa-bolt"></i>
+            </p>
+            <div class="cart__item-btns">
+              <a href="#/" class="cart__item-link">
+                <button class="cart__item-btn add-to-cart">
+                  add to basket
+                </button>
+              </a>
+              <a href="./product-detailes.html" class="cart__item-link">
+                <button class="cart__item-btn">
+                  more detailes
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="cart__item">
+          <div class="cart__item-img">
+            <img src="./assets/images/img/buggi-gocart/buggi-gocart-4.jpg" alt="">
+          </div>
+          <div class="cart__item-inner">
+            <h4 class="cart__item-title">
+              <a href="./product-detailes.html" class="cart__item-link">
+                Racer Go-cart
+              </a>
+              <span class="cart__item-rating">
+                <i class="fa-solid fa-star"></i>
+                5
+              </span>
+            </h4>
+            <p class="cart__item-price">
+              <span>Price:</span>
+              183
+              <i class="fa-solid fa-dollar"></i>
+            </p>
+            <p class="cart__item-type engin">
+              <span>Type:</span>
+              gasoline fuel
+              <i class="fa-solid fa-gas-pump"></i>
+            </p>
+            <div class="cart__item-btns">
+              <a href="#/" class="cart__item-link">
+                <button class="cart__item-btn add-to-cart">
+                  add to basket
+                </button>
+              </a>
+              <a href="./product-detailes.html" class="cart__item-link">
+                <button class="cart__item-btn">
+                  more detailes
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="cart__item">
+          <div class="cart__item-img">
+            <img src="./assets/images/img/off-road/offroad-1.jpg" alt="">
+          </div>
+          <div class="cart__item-inner">
+            <h4 class="cart__item-title">
+              <a href="./product-detailes.html" class="cart__item-link">
+                Jeep FF-021
+              </a>
+              <span class="cart__item-rating">
+                <i class="fa-solid fa-star"></i>
+                3
+              </span>
+            </h4>
+            <p class="cart__item-price">
+              <span>Price:</span>
+              152
+              <i class="fa-solid fa-dollar"></i>
+            </p>
+            <p class="cart__item-type">
+              <span>Type:</span>
+              electrical
+              <i class="fa-solid fa-bolt"></i>
+            </p>
+            <div class="cart__item-btns">
+              <a href="#/" class="cart__item-link">
+                <button class="cart__item-btn add-to-cart">
+                  add to basket
+                </button>
+              </a>
+              <a href="./product-detailes.html" class="cart__item-link">
+                <button class="cart__item-btn">
+                  more detailes
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="cart__item">
+          <div class="cart__item-img">
+            <img src="./assets/images/img/sedan-sport/sedan-sport-2.jpg" alt="">
+          </div>
+          <div class="cart__item-inner">
+            <h4 class="cart__item-title">
+              <a href="./product-detailes.html" class="cart__item-link">
+                Bently Sport
+              </a>
+              <span class="cart__item-rating">
+                <i class="fa-solid fa-star"></i>
+                4
+              </span>
+            </h4>
+            <p class="cart__item-price">
+              <span>Price:</span>
+              250
+              <i class="fa-solid fa-dollar"></i>
+            </p>
+            <p class="cart__item-type">
+              <span>Type:</span>
+              electrical
+              <i class="fa-solid fa-bolt"></i>
+            </p>
+            <div class="cart__item-btns">
+              <a href="#/" class="cart__item-link">
+                <button class="cart__item-btn add-to-cart">
+                  add to basket
+                </button>
+              </a>
+              <a href="./product-detailes.html" class="cart__item-link">
+                <button class="cart__item-btn">
+                  more detailes
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="cart__item">
+          <div class="cart__item-img">
+            <img src="./assets/images/img/big-size/bigsize-1.jpg" alt="">
+          </div>
+          <div class="cart__item-inner">
+            <h4 class="cart__item-title">
+              <a href="./product-detailes.html" class="cart__item-link">
+                Toyota Master
+              </a>
+              <span class="cart__item-rating">
+                <i class="fa-solid fa-star"></i>
+                5
+              </span>
+            </h4>
+            <p class="cart__item-price">
+              <span>Price:</span>
+              200
+              <i class="fa-solid fa-dollar"></i>
+            </p>
+            <p class="cart__item-type">
+              <span>Type:</span>
+              electrical
+              <i class="fa-solid fa-bolt"></i>
+            </p>
+            <div class="cart__item-btns">
+              <a href="#/" class="cart__item-link">
+                <button class="cart__item-btn add-to-cart">
+                  add to basket
+                </button>
+              </a>
+              <a href="./product-detailes.html" class="cart__item-link">
+                <button class="cart__item-btn">
+                  more detailes
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="cart__item">
+          <div class="cart__item-img">
+            <img src="./assets/images/img/sedan-sport/sedan-sport-4.jpg" alt="">
+          </div>
+          <div class="cart__item-inner">
+            <h4 class="cart__item-title">
+              <a href="./product-detailes.html" class="cart__item-link">
+                Maserati Fantom
+              </a>
+              <span class="cart__item-rating">
+                <i class="fa-solid fa-star"></i>
+                5
+              </span>
+            </h4>
+            <p class="cart__item-price">
+              <span>Price:</span>
+              194
+              <i class="fa-solid fa-dollar"></i>
+            </p>
+            <p class="cart__item-type">
+              <span>Type:</span>
+              electrical
+              <i class="fa-solid fa-bolt"></i>
+            </p>
+            <div class="cart__item-btns">
+              <a href="#/" class="cart__item-link">
+                <button class="cart__item-btn add-to-cart">
+                  add to basket
+                </button>
+              </a>
+              <a href="./product-detailes.html" class="cart__item-link">
+                <button class="cart__item-btn">
+                  more detailes
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="cart__item">
+          <div class="cart__item-img">
+            <img src="./assets/images/img/big-size/bigsize-3.jpg" alt="">
+          </div>
+          <div class="cart__item-inner">
+            <h4 class="cart__item-title">
+              <a href="./product-detailes.html" class="cart__item-link">
+                Benz Monster
+              </a>
+              <span class="cart__item-rating">
+                <i class="fa-solid fa-star"></i>
+                3
+              </span>
+            </h4>
+            <p class="cart__item-price">
+              <span>Price:</span>
+              280
+              <i class="fa-solid fa-dollar"></i>
+            </p>
+            <p class="cart__item-type">
+              <span>Type:</span>
+              electrical
+              <i class="fa-solid fa-bolt"></i>
+            </p>
+            <div class="cart__item-btns">
+              <a href="#/" class="cart__item-link">
+                <button class="cart__item-btn add-to-cart">
+                  add to basket
+                </button>
+              </a>
+              <a href="./product-detailes.html" class="cart__item-link">
+                <button class="cart__item-btn">
+                  more detailes
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="cart__item">
+          <div class="cart__item-img">
+            <img src="./assets/images/img/buggi-gocart/buggi-gocart-1.jpg" alt="">
+          </div>
+          <div class="cart__item-inner">
+            <h4 class="cart__item-title">
+              <a href="./product-detailes.html" class="cart__item-link">
+                Racer Go-cart
+              </a>
+              <span class="cart__item-rating">
+                <i class="fa-solid fa-star"></i>
+                5
+              </span>
+            </h4>
+            <p class="cart__item-price">
+              <span>Price:</span>
+              183
+              <i class="fa-solid fa-dollar"></i>
+            </p>
+            <p class="cart__item-type">
+              <span>Type:</span>
+              electrical
+              <i class="fa-solid fa-bolt"></i>
+            </p>
+            <div class="cart__item-btns">
+              <a href="#/" class="cart__item-link">
+                <button class="cart__item-btn add-to-cart">
+                  add to basket
+                </button>
+              </a>
+              <a href="./product-detailes.html" class="cart__item-link">
+                <button class="cart__item-btn">
+                  more detailes
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="cart__item">
+          <div class="cart__item-img">
+            <img src="./assets/images/img/off-road/offroad-3.jpg" alt="">
+          </div>
+          <div class="cart__item-inner">
+            <h4 class="cart__item-title">
+              <a href="./product-detailes.html" class="cart__item-link">
+                Jeep FF-022
+              </a>
+              <span class="cart__item-rating">
+                <i class="fa-solid fa-star"></i>
+                4
+              </span>
+            </h4>
+            <p class="cart__item-price">
+              <span>Price:</span>
+              163
+              <i class="fa-solid fa-dollar"></i>
+            </p>
+            <p class="cart__item-type">
+              <span>Type:</span>
+              electrical
+              <i class="fa-solid fa-bolt"></i>
+            </p>
+            <div class="cart__item-btns">
+              <a href="#/" class="cart__item-link">
+                <button class="cart__item-btn add-to-cart">
+                  add to basket
+                </button>
+              </a>
+              <a href="./product-detailes.html" class="cart__item-link">
+                <button class="cart__item-btn">
+                  more detailes
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="cart__item">
+          <div class="cart__item-img">
+            <img src="./assets/images/img/sedan-sport/sedan-sport-1.jpg" alt="">
+          </div>
+          <div class="cart__item-inner">
+            <h4 class="cart__item-title">
+              <a href="./product-detailes.html" class="cart__item-link">
+                Chevrolet Kobra
+              </a>
+              <span class="cart__item-rating">
+                <i class="fa-solid fa-star"></i>
+                4
+              </span>
+            </h4>
+            <p class="cart__item-price">
+              <span>Price:</span>
+              238
+              <i class="fa-solid fa-dollar"></i>
+            </p>
+            <p class="cart__item-type">
+              <span>Type:</span>
+              electrical
+              <i class="fa-solid fa-bolt"></i>
+            </p>
+            <div class="cart__item-btns">
+              <a href="#/" class="cart__item-link">
+                <button class="cart__item-btn add-to-cart">
+                  add to basket
+                </button>
+              </a>
+              <a href="./product-detailes.html" class="cart__item-link">
+                <button class="cart__item-btn">
+                  more detailes
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="cart__item">
+          <div class="cart__item-img">
+            <img src="./assets/images/img/sedan-sport/sedan-sport-3.jpg" alt="">
+          </div>
+          <div class="cart__item-inner">
+            <h4 class="cart__item-title">
+              <a href="./product-detailes.html" class="cart__item-link">
+                Audi Torpedo
+              </a>
+              <span class="cart__item-rating">
+                <i class="fa-solid fa-star"></i>
+                5
+              </span>
+            </h4>
+            <p class="cart__item-price">
+              <span>Price:</span>
+              182
+              <i class="fa-solid fa-dollar"></i>
+            </p>
+            <p class="cart__item-type">
+              <span>Type:</span>
+              electrical
+              <i class="fa-solid fa-bolt"></i>
+            </p>
+            <div class="cart__item-btns">
+              <a href="#/" class="cart__item-link">
+                <button class="cart__item-btn add-to-cart">
+                  add to basket
+                </button>
+              </a>
+              <a href="./product-detailes.html" class="cart__item-link">
+                <button class="cart__item-btn">
+                  more detailes
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="cart__item">
+          <div class="cart__item-img">
+            <img src="./assets/images/img/suv/suv-3.jpg" alt="">
+          </div>
+          <div class="cart__item-inner">
+            <h4 class="cart__item-title">
+              <a href="./product-detailes.html" class="cart__item-link">
+                BMW X6
+              </a>
+              <span class="cart__item-rating">
+                <i class="fa-solid fa-star"></i>
+                5
+              </span>
+            </h4>
+            <p class="cart__item-price">
+              <span>Price:</span>
+              194
+              <i class="fa-solid fa-dollar"></i>
+            </p>
+            <p class="cart__item-type">
+              <span>Type:</span>
+              electrical
+              <i class="fa-solid fa-bolt"></i>
+            </p>
+            <div class="cart__item-btns">
+              <a href="#/" class="cart__item-link">
+                <button class="cart__item-btn add-to-cart">
+                  add to basket
+                </button>
+              </a>
+              <a href="./product-detailes.html" class="cart__item-link">
+                <button class="cart__item-btn">
+                  more detailes
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pagination">
+      <ul class="pagination__list">
+        <li class="pagination__list-item">
+          <button type="button" class="pagination__btn" data-page="first" title="first page">
+            <i class="fa-solid fa-angles-left"></i>
+          </button>
+        </li>
+        <li class="pagination__list-item">
+          <button type="button" class="pagination__btn" data-page="previous" title="previous page">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+        </li>
+        <li class="pagination__list-item">
+          <span>...</span>
+        </li>
+        <li class="pagination__list-item">
+          <button type="button" class="pagination__btn active" data-page="1" title="page 1">
+            1
+          </button>
+        </li>
+        <li class="pagination__list-item">
+          <button type="button" class="pagination__btn" data-page="2" title="page 2">
+            2
+          </button>
+        </li>
+        <li class="pagination__list-item">
+          <button type="button" class="pagination__btn" data-page="3" title="page 3">
+            3
+          </button>
+        </li>
+        <li class="pagination__list-item">
+          <span>...</span>
+        </li>
+        <li class="pagination__list-item">
+          <button type="button" class="pagination__btn" data-page="next" title="next page">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </li>
+        <li class="pagination__list-item">
+          <button type="button" class="pagination__btn" data-page="last" title="last page">
+            <i class="fa-solid fa-angles-right"></i>
+          </button>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__about">
+      <span class="footer__header-text">
+        About Rocket Car
+        <img src="./assets/images/icon.png" alt="Rocket Car">
+        :
+      </span>
+      <p class="footer__text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe totam vel cum eum nam repudiandae autem ipsam sint praesentium sapiente, facilis blanditiis ratione est quibusdam odio, neque expedita fugiat sunt
+      </p>
+    </div>
+    <div class="footer__links">
+      <span class="footer__header-text">
+        Quick Access:
+      </span>
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            Rocket Car
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            Products
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            User Dashboard
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            Support
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            News Letter
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            Blog
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__contact">
+      <p class="footer__header-text">
+        <i class="fa-solid fa-location-dot"></i>
+        Address:
+      </p>
+      <p class="footer__contact-address">
+        2780 Alexander Avenue, Concord, California, 94520.
+      </p>
+      <p class="footer__header-text">
+        <i class="fa-solid fa-phone"></i>
+        Phone Number:
+      </p>
+      <p class="footer__contact-phone">
+        +1-584-555-666-22
+      </p>
+      <p class="footer__header-text">
+        <i class="fa-solid fa-comment"></i>
+        Social:
+      </p>
+      <div class="footer__contact-socials">
+        <a href="#/" class="footer__link">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#/" class="footer__link">
+          <i class="fa-brands fa-amazon"></i>
+        </a>
+        <a href="#/" class="footer__link">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+        <a href="#/" class="footer__link">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer__copyRight">
+      2024 &copy; Rocket Car. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
