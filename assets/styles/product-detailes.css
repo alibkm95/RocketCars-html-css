@@ -1,11 +1,13 @@
-.detailes {
+.detailes,
+.comments {
   margin-bottom: 3rem;
   box-shadow: 0 0 15px var(--black-40);
   border-radius: var(--radius-bg);
   padding: 1rem 0.5rem;
 }
 
-.detailes__header {
+.detailes__header,
+.comments__header {
   margin-bottom: 2rem;
   text-align: center;
   display: flex;
@@ -13,14 +15,16 @@
   justify-content: center;
 }
 
-.detailes__header-text {
+.detailes__header-text,
+.comments__header-text {
   color: var(--navy);
   font-size: clamp(1rem, 1rem + 1vw, 3rem);
   font-weight: 700;
   text-align: center;
 }
 
-.detailes__header-text>i {
+.detailes__header-text>i,
+.comments__header-text>i {
   color: var(--red);
 }
 
@@ -201,7 +205,7 @@
   grid-area: desc;
 }
 
-.add-to-cart{
+.add-to-cart {
   grid-area: btn;
   padding: 0.5rem 1rem;
   font: inherit;
@@ -213,13 +217,162 @@
   transition: transform 0.3s ease;
 }
 
-.add-to-cart:hover{
+.add-to-cart:hover {
   transform: scale(1.05);
 }
 
+.comments__header-link {
+  display: none;
+}
+
+.comments__header-btn {
+  display: block;
+  background-color: var(--purple-0);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  outline: transparent;
+  color: var(--white);
+  box-shadow: 0 0 15px var(--black-20);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-block: auto;
+}
+
+.comments__header-btn:hover {
+  transform: scale(1.1);
+  color: var(--yellow);
+}
+
+.comments__body-inner {
+  width: 100%;
+  max-width: 60rem;
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+.comment {
+  margin-bottom: 3rem;
+}
+
+.comment__info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.comment__info-img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px dashed var(--red);
+}
+
+.comment__info-img>img {
+  width: 100%;
+}
+
+.comment__info-user {
+  width: calc(100% - 7rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.comment__info-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.comment__info-position {
+  color: var(--light-blue);
+}
+
+.comment__info-date {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--txt);
+}
+
+.comment__message {
+  background-color: var(--purple-100);
+  color: var(--white);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-bg);
+  position: relative;
+}
+
+.comment__message::before {
+  content: "";
+  position: absolute;
+  background-color: inherit;
+  width: 1rem;
+  height: 1rem;
+  top: 0;
+  left: 1rem;
+  transform: rotate(45deg) translateY(-40%);
+  z-index: -1;
+}
+
+.new-comment__warnings {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--red);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  border-top: 1px solid var(--txt);
+  padding-top: 1rem;
+}
+
+.new-comment__form {
+  display: flex;
+  align-items: first baseline;
+  box-shadow: 0 0 15px var(--black-20);
+  padding: 0.5rem;
+  border-radius: var(--radius-bg);
+}
+
+.submit-new-comment {
+  cursor: pointer;
+  font: inherit;
+  padding: 1rem;
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.submit-new-comment:hover{
+  background-color: var(--yellow);
+}
+
+.new-comment__txt {
+  font: inherit;
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  outline: transparent;
+  background-color: transparent;
+  resize: vertical;
+}
+
 @media screen and (min-width: 540px) {
-  .detailes__header {
+
+  .detailes__header,
+  .comments__header {
     justify-content: space-between;
+  }
+
+  .comments__header-link {
+    display: block;
   }
 }
 
@@ -232,18 +385,18 @@
     width: 50%;
   }
 
-  .detailes__body-content{
+  .detailes__body-content {
     position: relative;
     grid-template-areas:
-    "name name"
-    "code price"
-    "type star"
-    "option option"
-    "desc desc"
-    "btn btn";
+      "name name"
+      "code price"
+      "type star"
+      "option option"
+      "desc desc"
+      "btn btn";
   }
 
-  .detailes__body-content::before{
+  .detailes__body-content::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -257,9 +410,13 @@
   .detailes__title {
     font-size: clamp(1.2rem, 0.5rem + 1.1vw, 2rem);
   }
-  
+
   .detailes__text {
     font-size: clamp(1rem, 0.5rem + 1.1vw, 1.4rem);
+  }
+
+  .comment__message {
+    max-width: 75%;
   }
 }
 
