@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- icon source -->
+  <link rel="stylesheet" href="./assets/styles/all.min.css">
+  <!-- global styles -->
+  <link rel="stylesheet" href="./assets/styles/global.css">
+  <!-- styles -->
+  <link rel="stylesheet" href="./assets/styles/product-detailes.css">
+  <!-- favicon source -->
+  <link rel="sortcut icon" href="./assets/images/icon.ico">
+  <title>Rocket Car</title>
+</head>
+<body>
+  <header>
+    <input type="checkbox" name="menu-toggler-input" id="menu-toggler-input" class="hide">
+    <nav class="main-nav">
+      <div class="main-nav__toggler">
+        <label for="menu-toggler-input">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+      </div>
+      <div class="main-nav__controls">
+        <div class="controls__user">
+          <a href="./user-dash.html" class="controls__link">
+            <i class="fa-solid fa-user-circle controls__icon"></i>
+            <span class="controls__text">
+              dashboard
+            </span>
+          </a>
+        </div>
+        <div class="controls__basket">
+          <a href="./user-dash.html" class="controls__link">
+            <i class="fa-solid fa-shopping-cart controls__icon"></i>
+            <span class="controls__text">
+              basket
+            </span>
+          </a>
+        </div>
+        <div class="controls__support">
+          <a href="#support-area" class="controls__link">
+            <i class="fa-solid fa-headphones controls__icon"></i>
+            <span class="controls__text">
+              support
+            </span>
+          </a>
+        </div>
+        <div class="controls__theme">
+          <a href="#/" class="controls__link">
+            <i class="fa-solid fa-moon controls__icon"></i>
+            <span class="controls__text">
+              theme
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="main-nav__logo">
+        <img src="./assets/images/logo2.svg" alt="Rocket Car" class="main-nav__logo-image">
+      </div>
+      <div class="main-nav__searchbar">
+        <div class="searchbar">
+          <label class="searchbar__label" for="searchbox">
+            <i class="fa-solid fa-search"></i>
+          </label>
+          <input type="text" name="searchbox" id="searchbox" class="searchbar__input" placeholder="Search ...">
+        </div>
+      </div>
+    </nav>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__list-item has-close">
+          <label for="menu-toggler-input" class="close-menu-btn">
+            <i class="fa-solid fa-x"></i>
+          </label>
+        </li>
+        <li class="menu__list-item">
+          <a href="./index.html" class="menu__link">
+            <i class="fa-solid fa-home"></i>
+            Home
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="./products.html" class="menu__link">
+            <i class="fa-solid fa-car"></i>
+            Products
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="./user-dash.html" class="menu__link">
+            <i class="fa-solid fa-user-circle"></i>
+            User Dashboard
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="#/" class="menu__link">
+            <i class="fa-solid fa-message"></i>
+            Contact Us
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="./login-signup.html" class="menu__link has-reg">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            Signin / Signup
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="detailes">
+      <div class="detailes__header">
+        <h3 class="detailes__header-text">
+          <i class="fa-solid fa-circle-info"></i>
+          Product Detailes: Benz truck
+        </h3>
+      </div>
+      <div class="detailes__body">
+        <div class="detailes__body-gallery">
+          <input type="radio" name="slider" id="slide1" class="hide" checked>
+          <input type="radio" name="slider" id="slide2" class="hide">
+          <input type="radio" name="slider" id="slide3" class="hide">
+          <input type="radio" name="slider" id="slide4" class="hide">
+          <input type="radio" name="slider" id="slide5" class="hide">
+          <div class="slider">
+            <div class="slider__items">
+              <img src="./assets/images/img/big-size/gallery/bigsize-g-1.jpg" alt="img">
+              <img src="./assets/images/img/big-size/gallery/bigsize-g-2.jpg" alt="img">
+              <img src="./assets/images/img/big-size/gallery/bigsize-g-3.jpg" alt="img">
+              <img src="./assets/images/img/big-size/gallery/bigsize-g-4.jpg" alt="img">
+              <img src="./assets/images/img/big-size/gallery/bigsize-g-5.jpg" alt="img">
+            </div>
+          </div>
+          <div class="slider__controls">
+            <label for="slide1">
+              <img src="./assets/images/img/big-size/gallery/bigsize-g-1.jpg" alt="img">
+            </label>
+            <label for="slide2">
+              <img src="./assets/images/img/big-size/gallery/bigsize-g-2.jpg" alt="img">
+            </label>
+            <label for="slide3">
+              <img src="./assets/images/img/big-size/gallery/bigsize-g-3.jpg" alt="img">
+            </label>
+            <label for="slide4">
+              <img src="./assets/images/img/big-size/gallery/bigsize-g-4.jpg" alt="img">
+            </label>
+            <label for="slide5">
+              <img src="./assets/images/img/big-size/gallery/bigsize-g-5.jpg" alt="img">
+            </label>
+          </div>
+        </div>
+        <div class="detailes__body-content">
+          <p class="detailes__title name">
+            product name:
+            <span class="detailes__text">
+              Benz Truck
+            </span>
+          </p>
+          <p class="detailes__title code">
+            code:
+            <span class="detailes__text">
+              <i class="fa-solid fa-hashtag"></i>
+              58267
+            </span>
+          </p>
+          <p class="detailes__title price">
+            price:
+            <span class="detailes__text">
+              189.15
+              <i class="fa-solid fa-dollar"></i>
+            </span>
+          </p>
+          <p class="detailes__title type">
+            type:
+            <span class="detailes__text">
+              electrical
+              <i class="fa-solid fa-bolt"></i>
+            </span>
+          </p>
+          <p class="detailes__title star">
+            <i class="fa-solid fa-star"></i>
+            5
+          </p>
+          <p class="detailes__title option">
+            options:
+            <span class="detailes__text">
+              mp3 player, bluetooth, 3.5mm jack, remote control
+            </span>
+          </p>
+          <p class="detailes__title decs">
+            description:
+            <span class="detailes__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et iure ipsa, atque dolores unde, doloremque aperiam ut corporis tempore laudantium nam? Rerum fuga reprehenderit, quaerat accusantium reiciendis veniam omnis aperiam!
+            </span>
+          </p>
+          <button type="button" class="add-to-cart">
+            <i class="fa-solid fa-cart-plus"></i>
+            Add to basket
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="comments">
+      
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__about">
+      <span class="footer__header-text">
+        About Rocket Car
+        <img src="./assets/images/icon.png" alt="Rocket Car">
+        :
+      </span>
+      <p class="footer__text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe totam vel cum eum nam repudiandae autem ipsam sint praesentium sapiente, facilis blanditiis ratione est quibusdam odio, neque expedita fugiat sunt
+      </p>
+    </div>
+    <div class="footer__links">
+      <span class="footer__header-text">
+        Quick Access:
+      </span>
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            Rocket Car
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            Products
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            User Dashboard
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            Support
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            News Letter
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            Blog
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__contact">
+      <p class="footer__header-text">
+        <i class="fa-solid fa-location-dot"></i>
+        Address:
+      </p>
+      <p class="footer__contact-address">
+        2780 Alexander Avenue, Concord, California, 94520.
+      </p>
+      <p class="footer__header-text">
+        <i class="fa-solid fa-phone"></i>
+        Phone Number:
+      </p>
+      <p class="footer__contact-phone">
+        +1-584-555-666-22
+      </p>
+      <p class="footer__header-text">
+        <i class="fa-solid fa-comment"></i>
+        Social:
+      </p>
+      <div class="footer__contact-socials">
+        <a href="#/" class="footer__link">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#/" class="footer__link">
+          <i class="fa-brands fa-amazon"></i>
+        </a>
+        <a href="#/" class="footer__link">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+        <a href="#/" class="footer__link">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer__copyRight">
+      2024 &copy; Rocket Car. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
