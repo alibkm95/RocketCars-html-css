@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- icon source -->
+  <link rel="stylesheet" href="./assets/styles/all.min.css">
+  <!-- global styles -->
+  <link rel="stylesheet" href="./assets/styles/global.css">
+  <!-- styles -->
+  <link rel="stylesheet" href="./assets/styles/user-dash.css">
+  <!-- favicon source -->
+  <link rel="sortcut icon" href="./assets/images/icon.ico">
+  <title>Rocket Car</title>
+</head>
+
+<body>
+  <header>
+    <input type="checkbox" name="menu-toggler-input" id="menu-toggler-input" class="hide">
+    <nav class="main-nav">
+      <div class="main-nav__toggler">
+        <label for="menu-toggler-input">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+      </div>
+      <div class="main-nav__controls">
+        <div class="controls__user">
+          <a href="./user-dash.html" class="controls__link">
+            <i class="fa-solid fa-user-circle controls__icon"></i>
+            <span class="controls__text">
+              dashboard
+            </span>
+          </a>
+        </div>
+        <div class="controls__basket">
+          <a href="./user-dash.html" class="controls__link">
+            <i class="fa-solid fa-shopping-cart controls__icon"></i>
+            <span class="controls__text">
+              basket
+            </span>
+          </a>
+        </div>
+        <div class="controls__support">
+          <a href="#support-area" class="controls__link">
+            <i class="fa-solid fa-headphones controls__icon"></i>
+            <span class="controls__text">
+              support
+            </span>
+          </a>
+        </div>
+        <div class="controls__theme">
+          <a href="#/" class="controls__link">
+            <i class="fa-solid fa-moon controls__icon"></i>
+            <span class="controls__text">
+              theme
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="main-nav__logo">
+        <img src="./assets/images/logo2.svg" alt="Rocket Car" class="main-nav__logo-image">
+      </div>
+      <div class="main-nav__searchbar">
+        <div class="searchbar">
+          <label class="searchbar__label" for="searchbox">
+            <i class="fa-solid fa-search"></i>
+          </label>
+          <input type="text" name="searchbox" id="searchbox" class="searchbar__input" placeholder="Search ...">
+        </div>
+      </div>
+    </nav>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__list-item has-close">
+          <label for="menu-toggler-input" class="close-menu-btn">
+            <i class="fa-solid fa-x"></i>
+          </label>
+        </li>
+        <li class="menu__list-item">
+          <a href="./index.html" class="menu__link">
+            <i class="fa-solid fa-home"></i>
+            Home
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="./products.html" class="menu__link">
+            <i class="fa-solid fa-car"></i>
+            Products
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="./user-dash.html" class="menu__link">
+            <i class="fa-solid fa-user-circle"></i>
+            User Dashboard
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="#/" class="menu__link">
+            <i class="fa-solid fa-message"></i>
+            Contact Us
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="./login-signup.html" class="menu__link has-reg">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            Signin / Signup
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="dashboard">
+      <div class="dashboard__header">
+        <h3 class="dashboard__header-text">
+          <i class="fa-solid fa-user-circle"></i>
+          Tom Holland's Dashboard
+        </h3>
+      </div>
+      <div class="dashboard__body">
+        <input type="radio" name="acc" id="account" class="hide" checked>
+        <input type="radio" name="acc" id="basket" class="hide">
+        <input type="radio" name="acc" id="tickets" class="hide">
+        <input type="radio" name="acc" id="history" class="hide">
+        <aside class="dashboard__body-sidebar">
+          <div class="sidebar__infos">
+            <img class="sidebar__infos-img" src="./assets/images/user1.jpg" alt="user">
+            <span class="sidebar__infos-name">
+              Tom Holland
+            </span>
+            <span class="sidebar__infos-email">
+              tomholland@mail.com
+            </span>
+          </div>
+          <div class="sidebar__controls">
+            <ul class="sidebar__controls-list">
+              <li class="sidebar__controls-listItem" data-focus="account">
+                <label for="account">
+                  <i class="fa-solid fa-user"></i>
+                  account info
+                </label>
+              </li>
+              <li class="sidebar__controls-listItem" data-focus="basket">
+                <label for="basket">
+                  <i class="fa-solid fa-shopping-cart"></i>
+                  basket
+                </label>
+              </li>
+              <li class="sidebar__controls-listItem" data-focus="tickets">
+                <label for="tickets">
+                  <i class="fa-solid fa-ticket"></i>
+                  tickets
+                </label>
+              </li>
+              <li class="sidebar__controls-listItem" data-focus="history">
+                <label for="history">
+                  <i class="fa-solid fa-clock"></i>
+                  buy history
+                </label>
+              </li>
+              <li class="sidebar__controls-listItem">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                log out
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <div class="dashboard__body-container">
+          <div class="user-account">
+            <form action="#" class="form-acc">
+              <div class="input u-name">
+                <i class="fa-solid fa-user-circle"></i>
+                <input type="text" name="u-name" id="u-name" placeholder="insert your name ..."
+                  value="tom_holland_2024">
+              </div>
+              <div class="input u-fullname">
+                <i class="fa-solid fa-font"></i>
+                <input type="text" name="u-fullname" id="u-fullname" placeholder="insert your full name ..."
+                  value="Tom Holland">
+              </div>
+              <div class="input u-email">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" name="u-email" id="u-email" placeholder="insert your email ..."
+                  value="tomholland@mail.com">
+              </div>
+              <div class="input u-phone">
+                <i class="fa-solid fa-mobile"></i>
+                <input type="text" name="u-phone" id="u-phone" placeholder="insert your phone ...">
+              </div>
+              <div class="input u-address">
+                <i class="fa-solid fa-location-dot"></i>
+                <textarea name="u-address" id="u-address" cols="30" rows="5"
+                  placeholder="insert your address ..."></textarea>
+              </div>
+              <span class="input-text">
+                &ast;
+                Fill in the password fields when you want to change your password.
+              </span>
+              <div class="input u-password">
+                <i class="fa-solid fa-fingerprint"></i>
+                <input type="password" name="u-password" id="u-password" placeholder="insert your password ...">
+              </div>
+              <div class="input u-password-repeat">
+                <i class="fa-solid fa-fingerprint"></i>
+                <input type="password" name="u-password-repeat" id="u-password-repeat"
+                  placeholder="repeat your password ...">
+              </div>
+              <div class="u-new-profile">
+                <input type="file" id="u-new-profile" class="hide">
+                <button type="button" class="new-profile-btn">
+                  <label for="u-new-profile">
+                    new profile photo
+                  </label>
+                </button>
+              </div>
+              <button type="submit" class="u-submit">
+                update infos
+              </button>
+            </form>
+          </div>
+          <div class="user-basket">
+            <p class="txt">
+              Your shopping basket is empty!
+            </p>
+          </div>
+          <div class="user-tickets">
+            <p class="txt">
+              You have no tickets yet!
+            </p>
+          </div>
+          <div class="user-history">
+            <p class="txt">
+              Your shopping history is empty!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__about">
+      <span class="footer__header-text">
+        About Rocket Car
+        <img src="./assets/images/icon.png" alt="Rocket Car">
+        :
+      </span>
+      <p class="footer__text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe totam vel cum eum nam repudiandae autem ipsam
+        sint praesentium sapiente, facilis blanditiis ratione est quibusdam odio, neque expedita fugiat sunt
+      </p>
+    </div>
+    <div class="footer__links">
+      <span class="footer__header-text">
+        Quick Access:
+      </span>
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            Rocket Car
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            Products
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            User Dashboard
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            Support
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            News Letter
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#/" class="footer__link">
+            Blog
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__contact">
+      <p class="footer__header-text">
+        <i class="fa-solid fa-location-dot"></i>
+        Address:
+      </p>
+      <p class="footer__contact-address">
+        2780 Alexander Avenue, Concord, California, 94520.
+      </p>
+      <p class="footer__header-text">
+        <i class="fa-solid fa-phone"></i>
+        Phone Number:
+      </p>
+      <p class="footer__contact-phone">
+        +1-584-555-666-22
+      </p>
+      <p class="footer__header-text">
+        <i class="fa-solid fa-comment"></i>
+        Social:
+      </p>
+      <div class="footer__contact-socials">
+        <a href="#/" class="footer__link">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#/" class="footer__link">
+          <i class="fa-brands fa-amazon"></i>
+        </a>
+        <a href="#/" class="footer__link">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+        <a href="#/" class="footer__link">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer__copyRight">
+      2024 &copy; Rocket Car. All rights reserved.
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,326 @@
+.dashboard {
+  margin-bottom: 3rem;
+  box-shadow: 0 0 15px var(--black-40);
+  border-radius: var(--radius-bg);
+  padding: 1rem 0.5rem;
+}
+
+.dashboard__header {
+  margin-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard__header-text {
+  color: var(--navy);
+  font-size: clamp(1rem, 1rem + 1vw, 3rem);
+  font-weight: 700;
+  text-align: center;
+}
+
+.dashboard__header-text>i {
+  color: var(--red);
+}
+
+.dashboard__body {
+  display: grid;
+  grid-auto-columns: 1fr;
+  gap: 1rem;
+}
+
+.dashboard__body-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sidebar__infos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.sidebar__infos-img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 3px dashed var(--red);
+}
+
+.sidebar__infos-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.sidebar__infos-email {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--txt);
+}
+
+.sidebar__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.sidebar__controls-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.sidebar__controls-listItem {
+  background-color: var(--purple-100);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar__controls-listItem label{
+  cursor: pointer;
+}
+
+.sidebar__controls-listItem:hover {
+  background-color: var(--purple-0);
+}
+
+#account:checked~.dashboard__body-sidebar>.sidebar__controls li[data-focus="account"] {
+  background-color: var(--purple-0);
+}
+
+#basket:checked~.dashboard__body-sidebar>.sidebar__controls li[data-focus="basket"] {
+  background-color: var(--purple-0);
+}
+
+#tickets:checked~.dashboard__body-sidebar>.sidebar__controls li[data-focus="tickets"] {
+  background-color: var(--purple-0);
+}
+
+#history:checked~.dashboard__body-sidebar>.sidebar__controls li[data-focus="history"] {
+  background-color: var(--purple-0);
+}
+
+#account:checked~.dashboard__body-container>.user-account {
+  display: block;
+}
+
+#basket:checked~.dashboard__body-container>.user-basket {
+  display: block;
+}
+
+#tickets:checked~.dashboard__body-container>.user-tickets {
+  display: block;
+}
+
+#history:checked~.dashboard__body-container>.user-history {
+  display: block;
+}
+
+
+.sidebar__controls-listItem>label {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar__controls-listItem i {
+  margin-right: 0.5rem;
+  color: var(--yellow);
+}
+
+.user-account,
+.user-history,
+.user-tickets,
+.user-basket {
+  display: none;
+  height: 100%;
+}
+
+.form-acc {
+  display: grid;
+  grid-auto-columns: 1fr;
+  gap: 1rem;
+  grid-template-areas:
+    "uname"
+    "ufullname"
+    "uemail"
+    "uphone"
+    "uaddress"
+    "txt"
+    "upass"
+    "upassr"
+    "uprof"
+    "usubmit";
+}
+
+.input {
+  width: 100%;
+  display: flex;
+  align-items: first baseline;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--txt);
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.input i {
+  color: var(--red);
+}
+
+.input input,
+.input textarea {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: transparent;
+  font: inherit;
+  resize: vertical;
+}
+
+.txt {
+  padding: 5rem 1rem;
+  font-size: clamp(1.5rem, 1rem + 1.5vw, 2.5rem);
+  font-weight: 900;
+  color: var(--red);
+  background-color: rgba(255, 0, 0, 0.2);
+  text-align: center;
+  border-radius: var(--radius-bg);
+}
+
+.input-text {
+  grid-area: txt;
+  font-size: clamp(0.8rem, 0.5rem + 0.5vw, 1rem);
+  color: var(--purple-0);
+}
+
+.u-new-profile {
+  grid-area: uprof;
+}
+
+.u-new-profile label {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.new-profile-btn {
+  display: block;
+  width: 100%;
+  font: inherit;
+  background-color: var(--yellow);
+  border-radius: var(--radius-sm);
+  border: none;
+  outline: transparent;
+}
+
+.u-name {
+  grid-area: uname;
+}
+
+.u-fullname {
+  grid-area: ufullname;
+}
+
+.u-email {
+  grid-area: uemail;
+}
+
+.u-phone {
+  grid-area: uphone;
+}
+
+.u-address {
+  grid-area: uaddress;
+}
+
+.u-password {
+  grid-area: upass;
+}
+
+.u-password-repeat {
+  grid-area: upassr;
+}
+
+.u-submit {
+  grid-area: usubmit;
+  font: inherit;
+  background-color: var(--green);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  outline: transparent;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 540px) {
+  .dashboard__body-sidebar {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .dashboard__body-sidebar {
+    flex-direction: column;
+    border-right: 1px solid var(--txt);
+    padding: 0.5rem;
+  }
+
+  .dashboard__body {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .dashboard__body-container {
+    grid-column: 2/-1;
+  }
+
+  .sidebar__controls-listItem {
+    font-size: clamp(1rem, 0.5rem + 1vw, 2rem);
+    padding: 0.5rem;
+  }
+
+  .form-acc {
+    height: 100%;
+    padding-bottom: 2rem;
+    place-items: start;
+    grid-template-areas:
+      "uname ufullname"
+      "uemail uphone"
+      "uaddress uaddress"
+      "txt txt"
+      "upass upassr"
+      "uprof usubmit";
+  }
+
+  .input{
+    font-size: 1.2rem;
+  }
+
+  .u-new-profile,
+  .u-submit{
+    width: 100%;
+    align-self: self-end;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 940px) {}
+
+@media screen and (min-width: 1200px) {}
